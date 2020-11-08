@@ -19,6 +19,10 @@
 		42D2C71E25580DB900BEFF0D /* Descriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2C71D25580DB900BEFF0D /* Descriptions.swift */; };
 		42D2C72325580F1100BEFF0D /* ExtensionColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2C72225580F1100BEFF0D /* ExtensionColors.swift */; };
 		42D2C7272558109600BEFF0D /* ExtensionImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D2C7262558109600BEFF0D /* ExtensionImages.swift */; };
+		42EF0FAF25584D5B0041DDFA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EF0FAE25584D5B0041DDFA /* Extensions.swift */; };
+		42EF0FB72558503B0041DDFA /* LibraryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EF0FB52558503B0041DDFA /* LibraryTableViewCell.swift */; };
+		42EF0FB82558503B0041DDFA /* LibraryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42EF0FB62558503B0041DDFA /* LibraryTableViewCell.xib */; };
+		42EF0FBE255852CF0041DDFA /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EF0FBD255852CF0041DDFA /* Tracks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		42D2C71D25580DB900BEFF0D /* Descriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Descriptions.swift; sourceTree = "<group>"; };
 		42D2C72225580F1100BEFF0D /* ExtensionColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColors.swift; sourceTree = "<group>"; };
 		42D2C7262558109600BEFF0D /* ExtensionImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionImages.swift; sourceTree = "<group>"; };
+		42EF0FAE25584D5B0041DDFA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		42EF0FB52558503B0041DDFA /* LibraryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewCell.swift; sourceTree = "<group>"; };
+		42EF0FB62558503B0041DDFA /* LibraryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryTableViewCell.xib; sourceTree = "<group>"; };
+		42EF0FBD255852CF0041DDFA /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 		42D2C6F22557F81C00BEFF0D /* AppleMusic */ = {
 			isa = PBXGroup;
 			children = (
+				42EF0FBC255852C00041DDFA /* Models */,
 				42D2C71C25580D9300BEFF0D /* Extensions+Helper */,
 				42D2C6F32557F81C00BEFF0D /* AppDelegate.swift */,
 				42D2C6F52557F81C00BEFF0D /* SceneDelegate.swift */,
@@ -84,6 +93,7 @@
 		42D2C715255803EA00BEFF0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				42EF0FBA2558528F0041DDFA /* Cells */,
 				42D2C70C2557FB3000BEFF0D /* MainTabBarController.swift */,
 				42D2C7172558040400BEFF0D /* SearchViewController.swift */,
 				42D2C6F72557F81C00BEFF0D /* LibraryViewController.swift */,
@@ -97,8 +107,26 @@
 				42D2C71D25580DB900BEFF0D /* Descriptions.swift */,
 				42D2C72225580F1100BEFF0D /* ExtensionColors.swift */,
 				42D2C7262558109600BEFF0D /* ExtensionImages.swift */,
+				42EF0FAE25584D5B0041DDFA /* Extensions.swift */,
 			);
 			path = "Extensions+Helper";
+			sourceTree = "<group>";
+		};
+		42EF0FBA2558528F0041DDFA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				42EF0FB52558503B0041DDFA /* LibraryTableViewCell.swift */,
+				42EF0FB62558503B0041DDFA /* LibraryTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		42EF0FBC255852C00041DDFA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42EF0FBD255852CF0041DDFA /* Tracks.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +188,7 @@
 			files = (
 				42D2C7092557F85600BEFF0D /* .gitignore in Resources */,
 				42D2C7002557F81D00BEFF0D /* LaunchScreen.storyboard in Resources */,
+				42EF0FB82558503B0041DDFA /* LibraryTableViewCell.xib in Resources */,
 				42D2C6FD2557F81D00BEFF0D /* Assets.xcassets in Resources */,
 				42D2C6FB2557F81C00BEFF0D /* Main.storyboard in Resources */,
 			);
@@ -173,11 +202,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				42D2C7182558040400BEFF0D /* SearchViewController.swift in Sources */,
+				42EF0FBE255852CF0041DDFA /* Tracks.swift in Sources */,
+				42EF0FAF25584D5B0041DDFA /* Extensions.swift in Sources */,
 				42D2C6F82557F81C00BEFF0D /* LibraryViewController.swift in Sources */,
 				42D2C70D2557FB3000BEFF0D /* MainTabBarController.swift in Sources */,
 				42D2C7272558109600BEFF0D /* ExtensionImages.swift in Sources */,
 				42D2C6F42557F81C00BEFF0D /* AppDelegate.swift in Sources */,
 				42D2C71E25580DB900BEFF0D /* Descriptions.swift in Sources */,
+				42EF0FB72558503B0041DDFA /* LibraryTableViewCell.swift in Sources */,
 				42D2C6F62557F81C00BEFF0D /* SceneDelegate.swift in Sources */,
 				42D2C72325580F1100BEFF0D /* ExtensionColors.swift in Sources */,
 			);
