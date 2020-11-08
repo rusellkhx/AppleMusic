@@ -10,8 +10,8 @@ import UIKit
 class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
         
+        tabBar.tintColor = UIColor.appColor(.pink)
         
         viewControllers = [
             createViewController(rootViewController: SearchViewController(),

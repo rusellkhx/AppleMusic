@@ -8,12 +8,9 @@
 import UIKit
 
 class LibraryViewController: UIViewController {
-
     override func viewDidLoad() {
         super .viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = UIColor.appColor(.white)
     }
-
-
 }
 
