@@ -18,3 +18,15 @@ struct TrackModel {
         
     }
 }
+
+struct Track: Decodable {
+    var trackName: String
+    let collectionName: String?
+    var artistName: String
+    var artworkUrl100: String?
+}
+
+struct SearchResponse: Decodable {
+    var resultCount: Int
+    var results: [Track]
+}

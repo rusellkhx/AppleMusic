@@ -9,7 +9,12 @@ import Foundation
 
 struct Descriptions {
     enum Message {
-
+        //MARK: - HttpService
+        static let noInternetConnection = "No internet connection!"
+        static let serverEror = "Server error!"
+        static let someServerError = "Some server error!"
+        static let reqestError = "Reqest error"
+        static let sharePhoto = "Share photo"
     }
 
     enum Navigation {

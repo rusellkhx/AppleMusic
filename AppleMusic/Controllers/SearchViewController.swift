@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Alamofire
 
 class SearchViewController: UITableViewController {
     
     //MARK: Variables
-    let tracks = TrackModel.createTrack()
+    var tracks = [Track]()
     let searchController = UISearchController(searchResultsController: nil)
+    let networkManager = NetworkManager()
+    
+    private var timer: Timer?
     
     override func viewDidLoad() {
         super .viewDidLoad()
@@ -42,18 +46,24 @@ class SearchViewController: UITableViewController {
         let cell = tableView.create(LibraryTableViewCell.self, indexPath)
         let track = tracks[indexPath.row]
         cell.titleLabel?.text = "\(track.artistName)\n\(track.trackName)"
-        cell.titleLabel?.numberOfLines = 2
+        cell.titleLabel?.numberOfLines = 3
         cell.imageUIImageView.image = UIImage(systemName: "heart")
         
         return cell
     }
-    
-    
 }
 
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+       
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
+            self.networkManager.fetchTracks(searchText: searchText) { [weak self] (searchResults) in
+                self?.tracks = searchResults?.results ?? []
+                self?.tableView.reloadData()
+            }
+        })
+        
     }
 }
